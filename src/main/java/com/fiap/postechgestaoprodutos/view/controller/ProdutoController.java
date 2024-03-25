@@ -42,12 +42,6 @@ public class ProdutoController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(produtos);
 	}
 
-	@DeleteMapping("/{idDoProduto}")
-	public ResponseEntity<Void> excluir(@PathVariable UUID idDoProduto) {
-		gerenciarProdutos.excluir(idDoProduto);
-		return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-	}
-
 	@PutMapping("/quantidade/{idDoProduto}")
 	public ResponseEntity<ProdutosForm> editarQuantidade(
 		@Valid @RequestBody EditarQuantidadeDoProdutoForm editarQuantidadeDoProdutoForm,

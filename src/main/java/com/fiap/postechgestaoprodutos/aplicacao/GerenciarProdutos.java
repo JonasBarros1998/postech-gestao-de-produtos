@@ -36,10 +36,6 @@ public class GerenciarProdutos {
 		return produtosForm;
 	}
 
-	public void excluir(UUID idDoProduto) {
-		this.produtosRepository.deleteById(idDoProduto);
-	}
-
 	public ProdutosForm editar(UUID idDoProduto, ProdutosForm produtosForm) {
 		var produto = this.produtosRepository.findById(idDoProduto)
 			.orElseThrow(() -> new ProdutoNaoExisteException("Produto nao existe"));

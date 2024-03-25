@@ -1,0 +1,29 @@
+app:
+  date:
+    format: yyyy-MM-dd
+spring:
+  config:
+    import: aws-secretsmanager:/secrets/base_de_dados_ecommerce_v2
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+    username: ${nome_do_usuario}
+    password: ${senha}
+    url: "jdbc:postgresql://localhost:5432/ecommerce"
+  web:
+    locale: pt_BR
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+aplicacao:
+  carrinho:
+    base-url: http://localhost:8083
+  token:
+    google-api:
+      url: "https://oauth2.googleapis.com"
+  administrador:
+    email: ADD_EMAIL_ADMINISTRADOR
+
+server:
+  port: 8082
