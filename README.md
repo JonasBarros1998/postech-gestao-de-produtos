@@ -9,3 +9,4 @@
 - No arquivo `application.yml` substitua todas as propriedades que iniciem com **ADD_** pelos valores que a infraestrutura criou e estão armazenados no seu ambiente AWS
 - Inicie o projeto. Ele irá iniciar na porta **8082**
 - As collections que esse projeto utiliza, se encontram na pasta chamada **Postech Fase 05 > gestao de produtos**
+- link das collections: [collections postmam](https://github.com/JonasBarros1998/ecommerce-infra/blob/main/collections-postman.json)
